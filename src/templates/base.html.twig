@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Datagrid</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
+		<link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+		<style>
+			.sorting_desc,
+			.sorting_asc {
+				position: relative;
+			}
+			.sorting_asc:before,
+			.sorting_asc:after,
+			.sorting_desc:before,
+			.sorting_desc:after {
+				position: absolute;
+				bottom: 0.9em;
+				display: block;
+				opacity: .3;
+			}
+			.sorting_desc:before,
+			.sorting_asc:before {
+				right: 1em;
+				content: "↑";
+			}
+			.sorting_asc:after,
+			.sorting_desc:after {
+				right: 0.5em;
+				content: "↓";
+			}
+			.sorting_asc:before,
+			.sorting_desc:after {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
